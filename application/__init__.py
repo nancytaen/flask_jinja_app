@@ -16,8 +16,10 @@ def create_app():
     #     app.register_blueprint(blueprint)
 
     @app.route('/')
-    def top_page():
-        return render_template("index.html")
+    def hello_world():
+        return "Hello world!"
+    # def top_page():
+    #     return render_template("index.html")
 
     # init_db()
 

@@ -1,11 +1,5 @@
 import os
 
-from dotenv import load_dotenv
-
-app_dir = os.path.dirname(__file__)
-env_path = os.path.join(app_dir, '.env')
-load_dotenv(dotenv_path=env_path)
-
 
 class Config:
     SECRET_KEY = os.environ.get("SECRET_KEY")
