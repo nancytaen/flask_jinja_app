@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 from config import configObject
 from application.model.model import init_db
+from application.views.user import user
 
 
 def create_app():
@@ -13,8 +14,9 @@ def create_app():
     # enable CORS
     CORS(app, resources={r'/*': {'origins': '*'}})
 
-    # with app.app_context():
-    #     app.register_blueprint(blueprint)
+    # register blueprints
+    with app.app_context():
+        app.register_blueprint(user)
 
     @app.route('/')
     def hello_world():
