@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask_cors import CORS
 
 from config import configObject
+from application.model.model import init_db
 
 
 def create_app():
@@ -21,6 +22,7 @@ def create_app():
     # def top_page():
     #     return render_template("index.html")
 
-    # init_db()
+    # instantiate db connection
+    init_db()
 
     return app
