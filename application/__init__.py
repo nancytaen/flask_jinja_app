@@ -19,10 +19,12 @@ def create_app():
         app.register_blueprint(user)
 
     @app.route('/')
-    def hello_world():
-        return "Hello world!"
-    # def top_page():
-    #     return render_template("index.html")
+    def top_page():
+        nav = [{'name': 'Home', 'url': '/home'},
+               {'name': 'Top', 'url': '/top'}]
+        return render_template("top.html",
+                               title="top", description="this is top",
+                               nav=nav)
 
     # instantiate db connection
     init_db()

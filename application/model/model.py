@@ -11,6 +11,7 @@ try:
     Base.query = db_session.query_property()
 
 except Exception as e:
+    print("Database Connection Error")
     print(e)
 
 
