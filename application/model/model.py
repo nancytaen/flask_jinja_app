@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-from model.base import Base
+from application.model.base import Base
 from config import configObject
 
 

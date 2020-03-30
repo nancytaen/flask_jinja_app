@@ -2,8 +2,8 @@ from flask import Flask, render_template
 from flask_cors import CORS
 
 from config import configObject
-from model.model import init_db
-from views.user import user
+from application.model.model import init_db
+from application.views.user import user
 
 
 def create_app():
