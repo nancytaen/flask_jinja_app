@@ -5,10 +5,16 @@ This app is ideal for medium to large sized application, or for anyone who like 
 
 ## Cloning the repository
 Anyone is free to clone this repository to estbablish a basic flask-jinja application setup.
-However, it is advised that you remove the venv directory inside the repository, and create your own virtualenv directory. 
-Please activate your own virtualenv, and install all packages listed in requirements.txt by
+Please first initialize virtualenv by:
 ```
+python -m virtualenv venv
+```
+Then activate virtualenv, and install all packages listed in requirements.txt by
+(shown is Windows command)
+```
+venv\activate\Scripts
 pip install -r requirements.txt --no-index
 ```
 
-Also note that you must create your own .flaskenv file, and add database uri for the file to run.
+Also note that you should modify .flaskenv file for your specific project configuration, and add database uri for the file to run.
+The default configuration provided is in development mode.
