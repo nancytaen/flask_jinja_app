@@ -13,7 +13,7 @@ Then activate virtualenv, and install all packages listed in requirements.txt by
 (shown is Windows command)
 ```
 venv\activate\Scripts
-pip install -r requirements.txt --no-index
+pip install -r requirements.txt
 ```
 
 Also note that you should modify .flaskenv file for your specific project configuration, and add database uri for the file to run.
